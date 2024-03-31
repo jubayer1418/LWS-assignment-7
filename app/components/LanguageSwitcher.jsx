@@ -28,10 +28,6 @@ const LanguageSwitcher = () => {
   const [showManu, setShowManu] = useState(false);
 
   const handleLanguageChange = (lang) => {
-    /* let path = pathname;
-    if (pathname.includes(selectedLanguage.code)) {
-      path = pathname.replace(selectedLanguage.code, lang);
-    } */
     setSelectedLanguage({
       ...selectedLanguage,
       code: lang,
@@ -50,7 +46,7 @@ const LanguageSwitcher = () => {
         >
           <Image
             className="max-w-8"
-            src="/bd.png"
+            src={`/${selectedLanguage.code}.png`}
             alt="bangla"
             height={100}
             width={165}
@@ -67,7 +63,7 @@ const LanguageSwitcher = () => {
               >
                 <Image
                   className="max-w-8"
-                  src="/bd.png"
+                  src={`/${entry.code}.png`}
                   alt="bangla"
                   height={100}
                   width={165}
